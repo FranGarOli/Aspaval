@@ -1,66 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+> Fran García Olivares
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> ESPECIFICACIONES TÉCNICAS DEL PROYECTO
 
-## About Laravel
+> 20 de Febrero del 2023
+> 
+> ![logo-Aspaval.png](https://i.postimg.cc/g0dvdhz3/logo-Aspaval.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## **¡Bienvenido a las especificaciones del proyecto!**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+El proyecto consiste en desarrollar una asociación de pádel en la que los administradores de la plataforma puedan crear eventos, en éste caso partidos de pádel o torneos, y los miembros de la plataforma puedan apuntarse a dichos eventos.
 
-## Learning Laravel
+Las personas que se registren en la aplicación web formarán parte de los miembros, dónde pueden ser visualizados por los demás miembros y aparecerán al apuntarse a cualquier evento. Así mismo, cada miembro puede editar su propia configuración, mandar mensajes a los administradores de la plataforma o ver información sobre nosotros.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+##  TECNOLOGÍAS UTILIZADAS
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Primeramente he utilizado **Laravel**, un framework que utiliza **PHP** para desarrollar la aplicación. Laravel se basa en el modelo VISTA-CONTROLADOR para organizar de la mejor manera las diferentes partes de la aplicación, la base de datos gestionada, las vistas que interpreta el navegador y los controladores que son los encargados de unir tanto la base de datos como la parte lógica de la aplicación.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Así mismo, he utilizado **Figma** para desarrollar todas las vistas y componentes que se utilizan en la aplicación y poder llevar un mejor seguimiento y estructuración de cómo iba a estar diseñada la aplicación antes de pasarla a producción.
 
-## Laravel Sponsors
+Las imágenes utilizadas han sido extraídas de plugins de **Figma** como por ejemplo Unsplash o Iconify.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Para el alojamiento en el servidor he utilizado **Apache**, creando un host virtual que direccione a la carpeta “public” del proyecto de Laravel. Con esto conseguimos que el cliente únicamente pueda acceder desde su navegador a los recursos que se encuentran en dicha carpeta, haciendo así que la aplicación se encuentre más segura.
 
-### Premium Partners
+Dicho proyecto ha sido implementado en una máquina virtual con un servidor Apache, pero por el momento no está disponible para el público. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Para guardar los datos de la aplicación se ha utilizado **mysql** y poder así gestionar los datos de los usuarios.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## **CASOS DE USO**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Las acciones en función del rol del usuario son las siguientes:
 
-## Security Vulnerabilities
+Un **usuario sin loguear**:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+ - Puede ver los miembros de la aplicación y visualizar la lista de
+   todos los eventos sin poder acceder a un evento en concreto.
+ - Puede mandar un mensaje añadiendo un nombre con el que será
+   representado.
+ - Puede acceder a la información de la asociación como a las cookies y
+   a la localización donde se encuentra la asociación.
 
-## License
+  
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Un **usuario logueado**, puede hacer lo mismo que el rol anterior y además puede:
+
+ - Acceder a un evento en concreto y se le permite apuntarse a dicho
+   evento.
+ - Puede mandar mensajes sin necesidad de añadir su nombre.
+ - Puede editar la configuración de su cuenta y agregar una foto de
+   perfil.
+
+Un **administrador** , puede hacer todo lo citado anteriormente y además puede:
+
+ - Crear eventos para los miembros.
+ - Borrar eventos y sus participantes.
+ - Visualizar eventos que no se encuentren visibles.
+ - Cambiar el rol de los miembros.
+ - Ver todos los mensajes y borrarlos.
+
+## **FUTURAS MEJORAS**
+
+La aplicación está sujeta a cambios futuros así como por ejemplo:
+
+ - Poder añadir un máximo de participantes para cada evento.
+ - Poder crear un chat a modo de comentarios en cada evento por si los
+   participantes tienen que comentar algo sobre dicho evento.
+ - Poder agregar secciones a modo de categorías.
+ - Posibilidad de poder crear un directo en cada evento y poder
+   retransmitirlo desde ahí.
+ - Crear una sección de merchandising dentro de la aplicación.
