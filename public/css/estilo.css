@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    /* background-image: url('../img/split_background.png');
+    background-repeat: no-repeat; */
+}
+
+/* ESTILOS DE LA CABECERA*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+    width: 100vw;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+nav a{
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+    border: 1px solid white;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav > a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:rgb(34, 153, 232);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav > a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.enlacesUsuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.contenedor-cuenta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .3em;
+
+}
+
+#icono{
+    width: 40px;
+    border-radius: 1em;
+}
+/* FIN DE ESTILOS DE LA CABECERA*/
+
+
+
+/* ESTILOS DEL MAIN*/
+main{
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+}
+
+.campos-formulario input{
+    color: #0086D6;
+    background: white;
+    padding: .5em;
+}
+.btn-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.btn-formulario input, .btn-formulario #btn-formulario{
+    border: 2px solid #0086D6;
+    background-color: #0086D6;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+.btn-formulario input:hover, .btn-formulario #btn-formulario:hover{
+    background-color: #fff;
+    border: 2px solid #039df7;
+    color: #039df7;
+}
+
+.btn-formulario #btn-formulario2{
+    border: 2px solid #0086D6;
+    background-color: #fff;
+
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    color: #0086D6;
+    font-weight: 600;
+}
+
+.btn-formulario #btn-formulario2:hover{
+    border: 2px solid #0086D6;
+    background-color: #0086D6;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* FIN DE LOS ESTILOS DEL MAIN*/
+
+/*ESTILOS REGISTRO*/
+.contenedor-registro{
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+
+    padding: 2em;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.contenedor-login{
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    border-radius: 2em;
+
+    padding: 2em;
+    background: rgb(243, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.campos-formulario{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.camposform-texto{
+    margin-top: 1em;
+}
+
+.campos-formulario-row{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 400px;
+}
+
+span.errores{
+    color: red;
+}
+
+.confirmacion{
+    text-align: center;
+    color: white;
+    background: rgb(76, 231, 55);
+    border-radius: 1em;
+}
+/*FIN ESTILOS REGISTRO*/
+
+
+/* ESTILOS DEL FOOTER*/
+footer{
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+    background-color: #0086D6;
+    color: white;
+    margin-top: 5em;
+}
+
+.politicas{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: center;
+}
+
+.politicas a{
+    color: white;
+}
+/* FIN DE LOS ESTILOS DEL FOOTER*/
+
+/*ESTILO DE LA PÁGINA PRINCIPAL*/
+.contenedor-inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+
+.imagen-principal{
+    width: fit-content;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.texto-principal{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 900px;
+    height: auto;
+    text-align: center;
+}
+/*FIN ESTILO DE LA PÁGINA PRINCIPAL*/
+
+/*ESTILO POLITICAS*/
+.contenedor-politicas{
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.contenedor-politicas h3{
+    color: #0086D6;
+}
+
+.contenedor-politica{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+/*FIN ESTILO POLITICAS*/
+
+/*ESTILO EVENTOS*/
+.contenedor-eventos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    padding: 2em;
+    gap: 3em;
+}
+
+.evento{
+    width: 550px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+    border: 1px solid #0086D6;
+    border-radius: 2em;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.evento-invisible{
+    width: 550px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+    border: 1px solid #0086D6;
+    border-radius: 2em;
+    opacity: 0.7;
+    background: rgb(170, 170, 170);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.fila-titulo{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background: #0086D6;
+    color: white;
+    border-radius: 1em;
+}
+
+.fila-descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    width: 500px;
+}
+
+.fila-descripcion a{
+    text-decoration: none;
+    color: #0086D6;
+}
+
+.enlacesEvento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enlaceApuntarse{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: .5em;
+}
+
+#btnApuntarse{
+    background-color: #039df7;
+    color: white;
+    border-radius: 1em;
+    padding: .5em;
+    transition: all ease-in-out 0.2s;
+}
+
+#btnApuntarse a{
+    text-decoration: none;
+    color: white;
+    transition: all ease-in-out 0.2s;
+}
+
+#btnApuntarse:hover{
+    background-color: #0086D6;
+}
+
+#btnApuntarse a:hover{
+    color: black;
+}
+
+
+.enlacesAdmin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+}
+
+/*botones para eliminar y editar*/
+#btnEliminar{
+    background-color: red;
+    color: white;
+    padding: .5em;
+    transition: all ease-in-out 0.2s;
+}
+
+#btnEliminar:hover{
+    background-color: white;
+    color: red;
+}
+
+#enlaceEditar{
+    background-color: azure;
+    padding: .5em;
+    transition: all ease-in-out 0.2s;
+}
+
+#enlaceEditar a{
+    text-decoration: none;
+    color: black;
+}
+
+#enlaceEditar:hover{
+    background-color: rgb(177, 177, 177);
+    color: white;
+}
+
+/*FIN ESTILO EVENTOS*/
+
+/*ESTILO MIEMBROS*/
+.contenedor-miembros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3em;
+}
+
+.contenedor-miembro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 200px;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding-bottom: 2em;
+    overflow-x: hidden;
+}
+
+.contenedor-miembro:hover{
+    overflow-x: inherit;
+    transition: all 1s ease;
+}
+/*FIN ESTILO MIEMBROS*/
+
+/*ESTILO MOSTRAR EVENTO*/
+.contenedorEvento{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.mostrarEvento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.mostrarEvento h1, #date{
+    text-align: center;
+}
+
+.apuntado{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+/*FIN ESTILO MOSTRAR EVENTO*/
+
+/*ESTILO LOCALIZACION / DONDE ESTAMOS*/
+.localizacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+/*FIN ESTILO LOCALIZACION / DONDE ESTAMOS*/
+
+/*ESTILO MENSAJES*/
+.contenedor-mensajes{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 400px;
+    height: auto;
+    padding: 1em;
+}
+
+.mensaje{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 1em;
+}
+
+.mensaje:hover{
+    background: rgb(179, 179, 179);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all .5s ease-in-out;
+}
+
+.contenedor-mensaje{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 800px;
+    height: auto;
+    padding: 1em;
+
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.noSubrayado{
+    text-decoration: none;
+    color: black;
+}
+
+.encabezado-mensaje{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.borrar{
+    display: flex;
+    gap : 1em;
+}
+
+.mensaje-leido{
+    font-weight: normal;
+}
+/*FIN ESTILO MENSAJES*/
+
+
+/*ESTILO DE CUENTA*/
+
+.cuenta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.negrita{
+   font-weight: bold;
+}
+
+#foto-perfil{
+    width: 300px;
+    height: 300px;
+}
+/*FIN ESTILO DE CUENTA*/
